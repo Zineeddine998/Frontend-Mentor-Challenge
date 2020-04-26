@@ -1,0 +1,167 @@
+.filter_section {
+  background: url("../assets/images/bg-header-desktop.svg");
+  background-color: #5da5a4;
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+  width: var(--w-100);
+}
+
+.filter_container {
+  width: var(--w-80);
+  margin: 0 auto;
+}
+
+.filter_wrapper {
+  display: flex;
+  width: var(--w-100);
+}
+
+.filter_panel {
+  background-color: var(--white);
+  box-shadow: var(--cards-shadow);
+  width: var(--w-100);
+  height: auto;
+  /* transform: translateY(100px); */
+  margin-top: 95px;
+  border-radius: var(--br-8);
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter_clear {
+  color: var(--sub-font-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.filter_clear:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.jobs_container {
+  width: var(--w-80);
+  margin: 0 auto;
+}
+
+.jobs_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  width: var(--w-100);
+}
+
+.jobs_card {
+  background-color: var(--white);
+  box-shadow: var(--cards-shadow);
+  width: var(--w-100);
+  margin-bottom: 15px;
+  display: flex;
+  padding: 25px 10px;
+  border-left: 5px solid var(--primary-color);
+  border-radius: var(--br-5);
+  flex-wrap: wrap;
+}
+
+.company_img {
+  margin: 0px 20px;
+  flex: 1;
+}
+
+.company_profile {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.company_profile_header {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.company_profile_header > .jobs_company_name {
+  font-size: 0.6rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+.company_profile_header > .jobs_new {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-right: 10px;
+}
+
+.company_profile_header > .jobs_featured {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 4px 7px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 10px;
+}
+
+.company_profile_middle {
+  align-items: center;
+  flex: 2;
+  display: flex;
+}
+
+.company_profile_middle > .jobs_position {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.jobs_position > h1:hover {
+  color: var(--primary-color);
+}
+
+.company_profile_footer {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--sub-font-color);
+  text-transform: capitalize;
+}
+
+.jobs_way > P::before {
+  content: "•";
+  color: var(--sub-font-color);
+  margin: 0 15px;
+}
+
+.jobs_way > p::after {
+  content: "•";
+  color: var(--subfont-color);
+  margin: 0 15px;
+}
+
+.jobs_requirement {
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.jobs_requirement > .filter_tags > .tags {
+  margin: 5px 10px;
+}

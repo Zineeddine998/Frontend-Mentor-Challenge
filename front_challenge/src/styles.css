@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0fafb;
+  font-size: 1rem;
+}
+
+/* *CSS Variable */
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #2b393a;
+  --primary-color: #5da5a4;
+  --secondry-color: #eefafc;
+  --job-title-color: #2d3939;
+  --jon-title-color-hover: #5da5a4;
+  --sub-font-color: #969a9b;
+
+  --w-100: 100%;
+  --w-80: 80%;
+
+  --br-8: 8px;
+  --br-5: 5px;
+
+  --cards-shadow: 0 4px 10px rgb(93, 165, 164, 0.1),
+    0 10px 10px rgb(93, 165, 164, 0.15);
+}
+
+.filter_tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter_tags > .tags {
+  background-color: var(--secondry-color);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: relative;
+  margin: 5px 20px;
+}
+
+.tags:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.tags:hover .filter-remove {
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
+.tags > span {
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  right: -25px;
+  padding: 7px;
+}

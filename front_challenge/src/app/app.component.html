@@ -1,0 +1,79 @@
+<header class="filter_section">
+  <div class="filter_container">
+    <div class="filter_wrapper" *ngIf="languageFilter.length > 0">
+      <div class="filter_panel">
+        <div class="filter_tags">
+          <div
+            class="tags"
+            *ngFor="let filterTags of languageFilter; let index = index"
+          >
+            {{ filterTags }}
+            <span
+              class="filter-remove"
+              (click)="removeFilterTag(filterTags, index)"
+            >
+              <img src="../assets/images/icon-remove.svg" alt="remove icon" />
+            </span>
+          </div>
+        </div>
+        <div class="filter_clear" (click)="clearFilter()">
+          <span>Clear</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="jobs_listing">
+  <div class="jobs_container">
+    <div class="jobs_wrapper">
+      <div class="jobs_list" id="list">
+        <div class="jobs_card" *ngFor="let job of jobsOpening; let i = index">
+          <div class="company_img">
+            <img src="{{ job.logo }}" alt="photosnap company" />
+          </div>
+          <div class="company_profile">
+            <div class="company_profile_header">
+              <div class="jobs_company_name">
+                <h2>{{ job.company }}</h2>
+              </div>
+              <div class="jobs_new" *ngIf="job.new">
+                <span>new!</span>
+              </div>
+              <div class="jobs_featured" *ngIf="job.featured">
+                <span>featured</span>
+              </div>
+            </div>
+            <div class="company_profile_middle">
+              <div class="jobs_position">
+                <h1>{{ job.position }}</h1>
+              </div>
+            </div>
+            <div class="company_profile_footer">
+              <div class="jobs_upload_time">
+                <p>{{ job.postedAt }}</p>
+              </div>
+              <div class="jobs_way">
+                <p>{{ job.contract }}</p>
+              </div>
+              <div class="jobs_location">
+                <p>{{ job.location }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="jobs_requirement">
+            <div class="filter_tags">
+              <div
+                class="tags"
+                *ngFor="let lang of job.tags; let i = index"
+                (click)="jobFilter(lang, i, job.id)"
+              >
+                {{ lang }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
